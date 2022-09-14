@@ -7,6 +7,6 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     static: path.resolve(__dirname, "./dist"),
-    watchFiles: ["src/pages/**/*"],
+    watchFiles: ["src/pages/**/**"],
   },
 });
