@@ -1,37 +1,37 @@
 // *IMPORT*
 import "./assets/css/styles.css";
 import "@fortawesome/fontawesome-free/js/all";
+import getElementById from "./components/getId";
 
 // Get Input
-let inptut1 = document.getElementById("input-1");
-let inptut2 = document.getElementById("input-2");
-let addSold = document.getElementById("add-sold");
+let inptut1 = getElementById("input-1");
+let inptut2 = getElementById("input-2");
+let addSold = getElementById("add");
+// ****get button deposit****
+let btnDeposit = getElementById("btn-deposit");
 
-// ****get button****
-let btnDepose = document.getElementById("btn-depose");
-let btnRetire = document.getElementById("btn-retirer");
+let btnRetire = getElementById("btn-retirer");
 
-let transacSold = document.getElementById("transac-sold");
-let retirSold = document.getElementById("retir-sold");
-let spanDepo = document.getElementById("curent-sold");
-let transacValide = document.getElementById("transac-valide");
-let transacError = document.getElementById("transac-error");
+let transacSold = getElementById("transac-sold");
+let retirSold = getElementById("retir-sold");
+let spanDepo = getElementById("curent-sold");
+let transacValide = getElementById("transac-valide");
+let transacError = getElementById("transac-error");
 let curenIban = "FR45166841";
 let curentSold = 900;
-document.getElementById("curent-iban").innerHTML = curenIban;
-document.getElementById("curent-sold").innerHTML = curentSold;
+getElementById("curent-iban").innerHTML = curenIban;
+getElementById("curent-sold").innerHTML = curentSold;
 
-// ***Function depose sold***
-const deposeeSold = () => {
+// ***Function deposit sold***
+const depositeSold = () => {
   let dep = parseInt(transacSold.value);
   curentSold += dep;
   spanDepo.textContent = curentSold;
   transacValide.classList.add("block");
   transacValide.textContent = "Transaction effecuter";
-  console.log(curentSold);
   return curentSold;
 };
-btnDepose.addEventListener("click", deposeeSold);
+btnDeposit.addEventListener("click", depositeSold);
 
 // ****Function retire sold****
 const retireeSold = () => {
@@ -40,10 +40,11 @@ const retireeSold = () => {
   spanDepo.textContent = curentSold;
   transacError.classList.add("block");
   transacError.textContent = "Transaction Invalide";
-  console.log(curentSold);
   return curentSold;
 };
 btnRetire.addEventListener("click", retireeSold);
+
+// refresh
 
 // -------Découvert------
 

@@ -7,6 +7,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     colors: {
+      customgreen: "#102922",
       white: "#fff",
       whitee: "#f3f4f5",
       black: "#000000",
@@ -36,15 +37,13 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-      mono: ["'DM Mono'", ...defaultTheme.fontFamily.mono]
+      jose: ["'Josefin'",...defaultTheme.fontFamily.sans]
       }
     },
     backgroundImage: {
-      "header-planet":"url('/assets/img/planete.webp')",
-      "wave":"url('/assets/img/wave.webp')",
     },
     fontFamily: {
-      'dm-mono': ['dm-mono'],
+      'jose-fin': ['jose-fin'],
     },
   },
   plugins: [],
