@@ -12,50 +12,83 @@
       <div class="text-3xl flex justify-center text-center">
         <h1>Hello</h1>
       </div>
-      <div class="flex flex-col">
-          <h1 class="pr-5">My Accounts</h1>
-          <div class="flex flex-row">
-            <h2 class="pr-5">Votre Iban est le :</h2>
-            <span id="curent-iban" class="pr-5"></span>
-          </div>
-          <div class="flex flex-row">
-            <h2 class="pr-5">Votre sold est de :</h2>
-            <span id="curent-sold"></span>
-          </div>
-          <div class="w-full">
-            <input
-              id="transac-sold"
-              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 w-72 text-black rounded"
-              placeholder="Saisir un montant à déposer"
-              type="number"
-            />
-            <button
-              type="button"
-              id="btn-deposit"
-              class="border-skyblue bg- border-2 mt-5 w-48 rounded"
-            >
-              Déposer
-            </button>
-            <p id="transac-valide" class="text-green-500"></p>
-          </div>
-          <div>
-            <input
-              id="retir-sold"
-              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 mt-8 w-72 text-black rounded"
-              placeholder="Saisir un montant à retirer"
-              type="number"
-            />
-            <button
-              type="button"
-              id="btn-retirer"
-              class="border-neutral-900 bg-purple-700 border-2 mt-5 w-48 rounded "
-            >
-              Retirer
-            </button>
-            <p id="transac-error" class="text-red-600"></p>
-          </div>
+      <div>
+        <form id="form-inscript">
+          <input
+            id="input-name"
+            type="text"
+            placeholder="Nom"
+            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
+          />
+          <input
+            id="input-sold"
+            type="number"
+            placeholder="sold"
+            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
+          />
+          <input
+            id="input-iban"
+            type="text"
+            placeholder="IBAN"
+            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
+          />
+          <button
+            type="button"
+            id="btn-submit"
+            class="border-skyblue bg- border-2 mt-5 w-48 rounded"
+          >
+            envoyer
+          </button>
+        </form>
+      </div>
+      <div class="flex flex-col text-center justify-center">
+        <h1 class="text-2xl pr-5">Compte Principal</h1>
+        <div class="flex flex-row text-center justify-center">
+          <h2 class="text-xl pr-5">Votre Nom :</h2>
+          <span id="dep-name" class="pr-5 text-xl"></span>
         </div>
+        <div class="flex flex-row text-center justify-center">
+          <h2 class="pr-5 text-xl">Votre sold est de :</h2>
+          <span class="text-xl pr-2" id="dep-sold"></span>
+          <i class="fa-solid fa-euro-sign text-xl"></i>
+        </div>
+        <div class="flex flex-row text-center justify-center">
+          <h2 class="text-xl pr-5">Votre Iban est le :</h2>
+          <span id="dep-iban" class="pr-5 text-xl"></span>
+        </div>
+        <div class="w-full">
+          <input
+            id="transac-sold"
+            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 w-72 text-black rounded"
+            placeholder="Saisir un montant à déposer"
+            type="number"
+          />
+          <button
+            type="button"
+            id="btn-deposit"
+            class="border-skyblue bg- border-2 mt-5 w-48 rounded"
+          >
+            Déposer
+          </button>
+          <p id="transac-valide" class="text-green-500"></p>
+        </div>
+        <div>
+          <input
+            id="retir-sold"
+            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 mt-8 w-72 text-black rounded"
+            placeholder="Saisir un montant à retirer"
+            type="number"
+          />
+          <button
+            type="button"
+            id="btn-retirer"
+            class="border-neutral-900 bg-purple-700 border-2 mt-5 w-48 rounded"
+          >
+            Retirer
+          </button>
+          <p id="transac-error" class="text-red-600"></p>
+        </div>
+      </div>
     </section>
   </body>
 </html>
-

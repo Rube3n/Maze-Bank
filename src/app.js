@@ -1,43 +1,43 @@
-// *IMPORT*
+// IMPORT
+
 import "./assets/css/styles.css";
 import "@fortawesome/fontawesome-free/js/all";
 import getElementById from "./components/getId";
 import depositeSold from "./components/deposit";
 import withdrawSold from "./components/withDrwan";
 import overDrafte from "./components/overDraft";
+import addUser from "./components/addUser";
+
 // Get Input
-let inptut1 = getElementById("input-1");
-let inptut2 = getElementById("input-2");
-let addSold = getElementById("add");
+let inputName = getElementById("input-name");
+let inputSold = getElementById("input-sold");
+let inputIban = getElementById("input-iban");
 
-// get current
-let curentSold = 900;
-let spanDepo = getElementById("curent-sold");
-let curenIban = "FR45166841";
+// get span
+let depName = getElementById("dep-name");
+let depIban = getElementById("dep-iban");
+let depSold = getElementById("dep-sold");
 
-// ****get button deposit****
+// get button deposit
+
 let btnDeposit = getElementById("btn-deposit");
 let btnRetire = getElementById("btn-retirer");
-
-getElementById("curent-iban").innerHTML = curenIban;
-getElementById("curent-sold").innerHTML = curentSold;
+let btnSubmit = getElementById("btn-submit");
 
 // depose
+
 btnDeposit.addEventListener("click", () => depositeSold());
 
 // retirer
+
 btnRetire.addEventListener("click", () => withdrawSold());
 
-// -------Découvert------
+// Découvert
+
 overDrafte();
 
+// class user
 
-//transefert
+btnSubmit.addEventListener("click", () => addUser());
 
-// addSold.addEventListener("click", () => a());
-// const transfert = () => {
-//   let results1 = parseInt(inptut1.value);
-//   let results2 = parseInt(inptut2.value);
-//   let b = results1 + results2;
-//   console.log(b);
-// };
+

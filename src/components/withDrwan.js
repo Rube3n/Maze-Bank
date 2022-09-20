@@ -1,6 +1,6 @@
 import getElementById from "./getId";
+import newUser from "./classUser";
 
-let curentSold = 900;
 let transacError = getElementById("transac-error");
 let retirSold = getElementById("retir-sold");
 let spanDepo = getElementById("curent-sold");
@@ -14,6 +14,5 @@ const withdrawSold = () => {
   transacError.textContent = "Transaction Invalide";
   return curentSold;
 };
-btnRetire.addEventListener("click", withdrawSold);
 
 export default withdrawSold;
