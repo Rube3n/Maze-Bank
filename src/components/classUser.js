@@ -1,4 +1,4 @@
-class newUser {
+class classUser {
   constructor(nameAccount, curentSold, curentIban) {
     (this.nameAccount = nameAccount),
       (this.curentSold = curentSold),
@@ -6,4 +6,4 @@ class newUser {
   }
 };
 
-export default newUser;
+export default classUser;

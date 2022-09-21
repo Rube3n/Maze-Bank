@@ -1,5 +1,5 @@
 import getElementById from "./getId";
-import newUser from "./classUser";
+import user from "./user";
 
 let transacError = getElementById("transac-error");
 let retirSold = getElementById("retir-sold");

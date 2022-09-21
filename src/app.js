@@ -6,7 +6,7 @@ import getElementById from "./components/getId";
 import depositeSold from "./components/deposit";
 import withdrawSold from "./components/withDrwan";
 import overDrafte from "./components/overDraft";
-import addUser from "./components/addUser";
+import { addUser, newUser } from "./components/addUser";
 
 // Get Input
 let inputName = getElementById("input-name");
@@ -40,4 +40,6 @@ overDrafte();
 
 btnSubmit.addEventListener("click", () => addUser());
 
-
+// btnSubmit.addEventListener("click", () => {
+//     console.log(newUser.curentSold);
+// });
