@@ -1,5 +1,5 @@
 // IMPORT
-
+import "chart.js";
 import "./assets/css/styles.css";
 import "@fortawesome/fontawesome-free/js/all";
 import getElementById from "./components/getId";
@@ -43,3 +43,13 @@ btnSubmit.addEventListener("click", () => addUser());
 // btnSubmit.addEventListener("click", () => {
 //     console.log(newUser.curentSold);
 // });
+
+const date1 = new Date().getDate();
+const date2 = new Date().getMonth();
+const date3 = new Date().getFullYear();
+const date4 = new Date().getHours();
+const date5 = new Date().getMinutes();
+
+document
+  .getElementById("date")
+  .append(`${date1}/${date2}/${date3} ${date4}:${date5}`);

@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "jose-fin";
-    src: url("../fonts/JosefinSans-Italic-VariableFont_wght.ttf") format("truetype");
+    font-family: "Pricedown";
+    src: url("../fonts/pricedown/pricedown-bl.otf") format("opentype");
 };

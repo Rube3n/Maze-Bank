@@ -7,88 +7,186 @@
     <title>Page Acceuil</title>
     <link href="../../assets/css/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-customgreen text-white font-jose-fin">
-    <section>
-      <div class="text-3xl flex justify-center text-center">
-        <h1>Bienvenue sur votre application banquaire</h1>
+  <body class="font-Pricedown bg-slate-600">
+    <!--HEADER-->
+    <header class="grid grid-cols-3">
+      <div class="pt-0 h-full flex items-center justify-center">
+        <img
+          src="../../assets/img/mazebank-logo.png"
+          alt=""
+          height="auto"
+          width="450px"
+        />
       </div>
-      <div>
-        <form id="form-inscript">
-          <input
-            id="input-name"
-            type="text"
-            placeholder="Nom"
-            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
-          />
-          <input
-            id="input-sold"
-            type="number"
-            placeholder="sold"
-            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
-          />
-          <input
-            id="input-iban"
-            type="text"
-            placeholder="IBAN"
-            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
-          />
-          <button
-            type="button"
-            id="btn-submit"
-            class="border-skyblue bg- border-2 mt-5 w-48 rounded"
-          >
-            envoyer
-          </button>
-        </form>
+      <div class="flex justify-end col-span-2">
+        <h1 class="text-4xl pr-5">Compte Principal :</h1>
       </div>
-      <div class="flex flex-col text-center justify-center">
-        <h1 class="text-2xl pr-5">Compte Principal</h1>
-        <div class="flex flex-row text-center justify-center">
-          <h2 class="text-xl pr-5">Votre Nom :</h2>
-          <span id="dep-name" class="pr-5 text-xl"></span>
-        </div>
-        <div class="flex flex-row text-center justify-center">
-          <h2 class="pr-5 text-xl">Votre sold est de :</h2>
-          <span class="text-xl pr-2" id="dep-sold"></span>
-          <i class="fa-solid fa-euro-sign text-xl"></i>
-        </div>
-        <div class="flex flex-row text-center justify-center">
-          <h2 class="text-xl pr-5">Votre Iban est le :</h2>
-          <span id="dep-iban" class="pr-5 text-xl"></span>
-        </div>
-        <div class="w-full">
-          <input
-            id="transac-sold"
-            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 w-72 text-black rounded"
-            placeholder="Saisir un montant à déposer"
-            type="number"
+    </header>
+    <!-- Séparation -->
+    <hr class="bg-red-700 h-2 mt-8" />
+    <!-- DASHBOARD -->
+    <section class="grid grid-cols-6 mt-6 mr-6 ml-8">
+      <!-- BANDEAU -->
+      <aside
+        class="bg-customgrayy grid grid-rows-2 text-white pl-4 h-[48rem] rounded-t"
+      >
+        <!-- ICON-PROFIL -->
+        <div class="flex justify-center items-center">
+          <img
+            src="../../assets/img/profil-icon.png"
+            alt=""
+            height="auto"
+            width="150px"
           />
-          <button
-            type="button"
-            id="btn-deposit"
-            class="border-skyblue bg- border-2 mt-5 w-48 rounded"
-          >
-            Déposer
-          </button>
-          <p id="transac-valide" class="text-green-500"></p>
         </div>
         <div>
-          <input
-            id="retir-sold"
-            class="border-2 border-green-500 placeholder:text-teal-700 pl-2 mt-8 w-72 text-black rounded"
-            placeholder="Saisir un montant à retirer"
-            type="number"
-          />
-          <button
-            type="button"
-            id="btn-retirer"
-            class="border-neutral-900 bg-purple-700 border-2 mt-5 w-48 rounded"
-          >
-            Retirer
-          </button>
-          <p id="transac-error" class="text-red-600"></p>
+          <!-- NAV -->
+          <nav>
+            <ul>
+              <li class="flex flex-row text-3xl">
+                <i class="fa-solid fa-house pl-4 text-red-600"></i>
+                <span class="pl-8"> Dashboard </span>
+              </li>
+              <li class="text-3xl py-8">
+                <i class="fa-regular fa-user pl-4 text-red-600"></i>
+                <span class="pl-8"> Profil </span>
+              </li>
+              <li class="text-3xl">
+                <i class="fa-solid fa-gear pl-4 text-red-600"></i>
+                <span class="pl-8"> Setting </span>
+              </li>
+              <li class="text-3xl pt-8">
+                <i class="fa-solid fa-circle-info pl-4 text-red-600"></i>
+                <span class="pl-8"> Help </span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <!-- CONTENUE -->
+      <div class="col-span-5 bg-gta rounded-r bg-center bg-cover text-white">
+        <section class="ml-8">
+          <div class="flex justify-end pr-8 pt-8">
+            <p id="date" class="text-4xl"></p>
+          </div>
+          <div class="flex flex-row">
+            <h2 class="text-3xl pr-5 pb-8">Votre Nom :</h2>
+            <span id="dep-name" class="pr-5 text-3xl text-white"></span>
+          </div>
+          <div class="flex flex-row">
+            <h2 class="pr-5 text-3xl pb-8">Votre sold est de :</h2>
+            <span class="text-3xl pr-2" id="dep-sold"></span>
+            <i class="fa-solid fa-euro-sign text-3xl"></i>
+          </div>
+          <div>
+            <h2 class="text-3xl pr-5">Votre Iban est le :</h2>
+            <span id="dep-iban" class="pr-5 text-3xl"></span>
+          </div>
+        </section>
+        <!-- FORUMLAIRE -->
+        <div class="flex justify-center items-center ">
+          <form id="form-inscript">
+            <input
+              id="input-name"
+              type="text"
+              placeholder="Nom"
+              class="border-2 border-red-500 placeholder:text-red-900 pl-2 text-black rounded"
+            />
+            <input
+              id="input-sold"
+              type="number"
+              placeholder="sold"
+              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
+            />
+            <input
+              id="input-iban"
+              type="text"
+              placeholder="IBAN"
+              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
+            />
+            <button
+              type="button"
+              id="btn-submit"
+              class="border-skyblue bg- border-2 mt-5 w-48 rounded"
+            >
+              envoyer
+            </button>
+          </form>
+        </div>
+        <!-- TRANSCATION -->
+        <div class="flex flex-col text-center justify-center items-center">
+          <div class="w-full">
+            <input
+              id="transac-sold"
+              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 w-72 text-black rounded"
+              placeholder="Saisir un montant à déposer"
+              type="number"
+            />
+            <button
+              type="button"
+              id="btn-deposit"
+              class="border-skyblue bg- border-2 mt-5 w-48 rounded"
+            >
+              Déposer
+            </button>
+            <p id="transac-valide" class="text-green-500"></p>
+          </div>
+          <div>
+            <input
+              id="retir-sold"
+              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 mt-8 w-72 text-black rounded"
+              placeholder="Saisir un montant à retirer"
+              type="number"
+            />
+            <button
+              type="button"
+              id="btn-retirer"
+              class="border-neutral-900 bg-purple-700 border-2 mt-5 w-48 rounded"
+            >
+              Retirer
+            </button>
+            <p id="transac-error" class="text-red-600"></p>
+          </div>
         </div>
       </div>
     </section>
+    <!-- FOOTER -->
+    <footer class="h-20 bg-red-900 text-white mb-6 ml-8 mr-6 rounded">
+      <div class="flex flex-col justify-center items-center h-full">
+        <span class="text-2xl pb-4">Copyright</span>
+        <div>
+          <span>
+            <a
+              class="decoration-none text-white"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://github.com/Rube3n"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </span>
+          <span class="px-4">
+            <a
+              class="decoration-none text-white"
+              target="_blank"
+              rel="noreferrer noopener"
+              href=""
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </span>
+          <span>
+            <a
+              class="decoration-none text-white"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="#"
+            >
+              <i class="fa-solid fa-link"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
