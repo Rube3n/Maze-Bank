@@ -7,157 +7,268 @@
     <title>Page Acceuil</title>
     <link href="../../assets/css/output.css" rel="stylesheet" />
   </head>
-  <body class="font-Pricedown bg-slate-600">
+  <body class="bg-neutral-700 lg:bg-">
     <!--HEADER-->
-    <header class="grid grid-cols-3">
-      <div class="pt-0 h-full flex items-center justify-center">
+    <header
+      class="lg:grid lg:grid-cols-3 lg:bg-bannergta lg:bg-cover lg:bg-center"
+    >
+      <div class="lg:pt-0 lg:h-full lg:flex lg:items-center lg:justify-center">
         <img
+          src="../../assets/img/mazebank-logo-white.png"
+          alt=""
+          class="xl:hidden"
+        />
+
+        <img
+          class="hidden xl:block"
           src="../../assets/img/mazebank-logo.png"
           alt=""
           height="auto"
           width="450px"
         />
       </div>
-      <div class="flex justify-end col-span-2">
-        <h1 class="text-4xl pr-5">Compte Principal :</h1>
-      </div>
     </header>
     <!-- Séparation -->
-    <hr class="bg-red-700 h-2 mt-8" />
+    <hr
+      class="bg-red-700 border-red-700 h-2 mt-4 lg:bg-red-700 lg:h-2 lg:mt-8"
+    />
     <!-- DASHBOARD -->
-    <section class="grid grid-cols-6 mt-6 mr-6 ml-8">
+    <section
+      class="min-h-screen grid grid-cols-5 lg:grid lg:grid-cols-6 lg:mt-6 lg:mr-6 lg:ml-8"
+    >
       <!-- BANDEAU -->
       <aside
-        class="bg-customgrayy grid grid-rows-2 text-white pl-4 h-[48rem] rounded-t"
+        class="flex flex-col h-full text-white font-Pricedown text-3xl bg-customgrayy lg:font-Pricedown lg:bg-customgrayy lg:grid lg:grid-rows-2 lg:text-white lg:pl-4 lg:h-full lg:w-full lg:rounded-t"
       >
         <!-- ICON-PROFIL -->
-        <div class="flex justify-center items-center">
+        <div class="pt-8 flex justify-center items-center">
           <img
+            class="w-12 lg:w-40"
             src="../../assets/img/profil-icon.png"
             alt=""
             height="auto"
-            width="150px"
           />
         </div>
         <div>
           <!-- NAV -->
           <nav>
             <ul>
-              <li class="flex flex-row text-3xl">
-                <i class="fa-solid fa-house pl-4 text-red-600"></i>
-                <span class="pl-8"> Dashboard </span>
+              <li
+                class="pt-8 flex justify-center items-center lg:flex lg:flex-row lg:text-3xl lg:font-Pricedown"
+              >
+                <i class="fa-solid fa-house lg:pl-4 lg:text-red-600"></i>
+                <span class="hidden lg:flex lg:pl-4">Dashboard</span>
               </li>
-              <li class="text-3xl py-8">
-                <i class="fa-regular fa-user pl-4 text-red-600"></i>
-                <span class="pl-8"> Profil </span>
+              <li
+                class="flex justify-center items-center px-4 py-8 lg:text-3xl lg:py-8"
+              >
+                <i class="fa-regular fa-user lg:pl-4 lg:text-red-600"></i>
+                <span class="hidden lg:flex lg:pl-4">Profil</span>
               </li>
-              <li class="text-3xl">
-                <i class="fa-solid fa-gear pl-4 text-red-600"></i>
-                <span class="pl-8"> Setting </span>
+              <li class="flex justify-center items-center px-4 lg:text-3xl">
+                <i class="fa-solid fa-gear lg:pl-4 lg:text-red-600"></i>
+                <span class="hidden lg:flex lg:pl-4">Setting</span>
               </li>
-              <li class="text-3xl pt-8">
-                <i class="fa-solid fa-circle-info pl-4 text-red-600"></i>
-                <span class="pl-8"> Help </span>
+              <li
+                class="flex justify-center items-center py-8 px-4 lg:text-3xl lg:pt-8"
+              >
+                <i class="fa-solid fa-circle-info lg:pl-4 lg:text-red-600"></i>
+                <span class="hidden lg:flex lg:pl-4">Help</span>
               </li>
             </ul>
           </nav>
         </div>
       </aside>
-      <!-- CONTENUE -->
-      <div class="col-span-5 bg-gta rounded-r bg-center bg-cover text-white">
-        <section class="ml-8">
-          <div class="flex justify-end pr-8 pt-8">
-            <p id="date" class="text-4xl"></p>
+      <!-- CONTENT -->
+      <div
+        class="col-span-4 bg-gtav lg:bg-gta rounded-r bg-center bg-cover text-white lg:grid lg:grid-rows-4 lg:col-span-5"
+      >
+        <section class="ml-8 lg:h-48">
+          <div class="flex justify-end pr-4 pt-4 lg:pr-8 lg:pt-8">
+            <!-- DATE -->
+            <p id="date" class="font-Pricedown pb-8 text-2xl lg:text-4xl"></p>
+          </div>
+          <!--  -->
+          <div class="flex flex-row">
+            <h2
+              class="pr-2 pb-4 text-xl lg:text-3xl lg:pr-5 lg:pb-8 lg:font-Verla"
+            >
+              Votre Nom :
+            </h2>
+            <span
+              id="dep-name"
+              class="text-xl pr-3 lg:pr-5 lg:text-3xl text-white"
+            ></span>
           </div>
           <div class="flex flex-row">
-            <h2 class="text-3xl pr-5 pb-8">Votre Nom :</h2>
-            <span id="dep-name" class="pr-5 text-3xl text-white"></span>
-          </div>
-          <div class="flex flex-row">
-            <h2 class="pr-5 text-3xl pb-8">Votre sold est de :</h2>
-            <span class="text-3xl pr-2" id="dep-sold"></span>
-            <i class="fa-solid fa-euro-sign text-3xl"></i>
+            <h2
+              class="text-xl pr-3 pb-4 lg:pr-5 lg:text-3xl lg:pb-8 lg:font-Inter"
+            >
+              Votre solde est de :
+            </h2>
+            <span class="text-xl pr-1 lg:text-3xl lg:pr-2" id="dep-sold"></span>
+            <i class="fa-solid fa-euro-sign text-xl lg:text-3xl"></i>
           </div>
           <div>
-            <h2 class="text-3xl pr-5">Votre Iban est le :</h2>
-            <span id="dep-iban" class="pr-5 text-3xl"></span>
+            <h2 class="text-xl pr-3 lg:text-3xl lg:pr-5 lg:font-Inter">
+              Votre Iban est le :
+            </h2>
+            <span id="dep-iban" class="text-xl pr-3 lg:pr-5 lg:text-3xl"></span>
           </div>
         </section>
-        <!-- FORUMLAIRE -->
-        <div class="flex justify-center items-center ">
-          <form id="form-inscript">
-            <input
-              id="input-name"
-              type="text"
-              placeholder="Nom"
-              class="border-2 border-red-500 placeholder:text-red-900 pl-2 text-black rounded"
-            />
-            <input
-              id="input-sold"
-              type="number"
-              placeholder="sold"
-              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
-            />
-            <input
-              id="input-iban"
-              type="text"
-              placeholder="IBAN"
-              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 text-black rounded"
-            />
+        <!-- FORM -->
+        <section class="grid grid-rows-2 pt-8">
+          <div class="flex justify-center items-center">
             <button
-              type="button"
-              id="btn-submit"
-              class="border-skyblue bg- border-2 mt-5 w-48 rounded"
+              id="btn-form"
+              class="flex justify-center items-center lg:text-2xl border-2 w-40 border-red-900 rounded lg:w-72 px-2 my-4 lg:py-2 py-2"
             >
-              envoyer
+              Show Form
             </button>
-          </form>
-        </div>
-        <!-- TRANSCATION -->
-        <div class="flex flex-col text-center justify-center items-center">
-          <div class="w-full">
-            <input
-              id="transac-sold"
-              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 w-72 text-black rounded"
-              placeholder="Saisir un montant à déposer"
-              type="number"
-            />
-            <button
-              type="button"
-              id="btn-deposit"
-              class="border-skyblue bg- border-2 mt-5 w-48 rounded"
-            >
-              Déposer
-            </button>
-            <p id="transac-valide" class="text-green-500"></p>
           </div>
+          <div class="flex justify-center items-center">
+            <form
+              id="form-inscript"
+              class="hidden flex-col lg:flex-row justify-center lg:w-full"
+            >
+              <div>
+                <input
+                  id="input-name"
+                  type="text"
+                  placeholder="Nom"
+                  class="h-9 rounded border-2 border-red-500 placeholder:text-red-900 pl-2 text-black"
+                />
+                <input
+                  id="input-sold"
+                  type="number"
+                  placeholder="Sold"
+                  class="h-9 my-4 rounded border-2 border-red-500 placeholder:text-red-900 pl-2 lg:mt-0 lg:mx-4 text-black"
+                />
+                <input
+                  id="input-iban"
+                  type="text"
+                  placeholder="IBAN"
+                  class="h-9 rounded border-2 border-red-500 placeholder:text-red-900 pl-2 text-black"
+                />
+              </div>
+              <div class="flex justify-center items-center lg:flex-col py-10">
+                <button
+                  type="button"
+                  id="btn-submit"
+                  class="border-red-800 py-2 px-2 rounded border-2 lg:mt-5 lg:w-48 lg:flex lg:justify-center lg:items-center"
+                >
+                  Envoyer
+                </button>
+              </div>
+              <div>
+                <hr class="w-full border-2 border-red-500" />
+              </div>
+            </form>
+          </div>
+        </section>
+        <!-- TRANSACT -->
+        <div class="lg:grid lg:grid-rows-2">
           <div>
+            <div class="flex justify-center items-center">
+              <button
+                id="btn-transac"
+                class="flex justify-center items-center lg:text-2xl border-2 w-40 border-red-900 rounded lg:w-72 px-2 my-4 py-2"
+              >
+                Show Transaction
+              </button>
+            </div>
+            <!-- DEPOSIT -->
+            <div
+              id="form-deposit"
+              class="hidden lg:flex-col lg:text-center lg:justify-center lg:items-center"
+            >
+              <div
+                class="w-full flex justify-center items-center flex-col pt-4"
+              >
+                <input
+                  id="transac-sold"
+                  class="h-9 rounded border-2 border-red-500 placeholder:text-red-900 pl-2 text-black"
+                  placeholder="Saisir un montant à déposer"
+                  type="number"
+                />
+                <button
+                  type="button"
+                  id="btn-deposit"
+                  class="my-4 lg:text-2xl border-2 py-2 px-2 border-red-900 rounded"
+                >
+                  Déposer
+                </button>
+                <p id="transac-valide" class="text-green-500"></p>
+              </div>
+            </div>
+          </div>
+          <!-- WITHDRAW -->
+          <div id="form-withdraw" class="hidden justify-center">
+            <div class="flex justify-center items-center flex-col pt-12">
+              <input
+                id="retir-sold"
+                class="h-9 rounded border-2 border-red-500 placeholder:text-red-900 pl-2 text-black"
+                placeholder="Saisir un montant à retirer"
+                type="number"
+              />
+              <button
+                type="button"
+                id="btn-retirer"
+                class="my-4 lg:text-2xl border-2 border-red-900 rounded px-2 lg:py-2 py-2"
+              >
+                Retirer
+              </button>
+              <hr class="w-full border-2 border-red-500" />
+              <p id="transac-error" class="text-red-600"></p>
+            </div>
+          </div>
+        </div>
+        <!-- TRANSFERT -->
+        <div class="flex justify-center items-center flex-col">
+          <div class="flex justify-center items-center">
+            <button
+              id="btn-transfer"
+              class="flex justify-center items-center my-4 lg:text-2xl w-40 border-2 py-2 border-red-900 rounded lg:w-72 lg:py-2"
+            >
+              Show Transfert
+            </button>
+          </div>
+          <div
+            id="form-transfer"
+            class="hidden justify-center items-center flex-col"
+          >
             <input
               id="retir-sold"
-              class="border-2 border-green-500 placeholder:text-teal-700 pl-2 mt-8 w-72 text-black rounded"
-              placeholder="Saisir un montant à retirer"
-              type="number"
+              class="h-9 my-4 rounded border-2 border-red-500 placeholder:text-red-900 pl-2 text-black"
+              placeholder="Ajouter un Bénéficiaire"
+              type="text"
             />
             <button
               type="button"
               id="btn-retirer"
-              class="border-neutral-900 bg-purple-700 border-2 mt-5 w-48 rounded"
+              class="lg:text-2xl border-2 py-2 px-2 border-red-900 rounded lg:py-2"
             >
-              Retirer
+              Ajouter
             </button>
-            <p id="transac-error" class="text-red-600"></p>
+            <div class="pt-4 pb-4">
+              <select id="" class="text-black">
+                <option value="">Choissir un bénéficiaire</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- FOOTER -->
-    <footer class="h-20 bg-red-900 text-white mb-6 ml-8 mr-6 rounded">
-      <div class="flex flex-col justify-center items-center h-full">
-        <span class="text-2xl pb-4">Copyright</span>
+    <footer
+      class="bg-customgrayy lg:h-20 lg:bg-red-900 text-white lg:mb-6 lg:ml-8 lg:mr-6 lg:rounded font-Pricedown"
+    >
+      <div class="flex flex-col justify-center items-center lg:h-full">
+        <span class="text-lg lg:text-2xl lg:pb-4">Copyright</span>
         <div>
           <span>
             <a
-              class="decoration-none text-white"
+              class="lg:decoration-none lg:text-white"
               target="_blank"
               rel="noreferrer noopener"
               href="https://github.com/Rube3n"
@@ -165,9 +276,9 @@
               <i class="fa-brands fa-github"></i>
             </a>
           </span>
-          <span class="px-4">
+          <span class="lg:px-4">
             <a
-              class="decoration-none text-white"
+              class="lg:decoration-none lg:text-white"
               target="_blank"
               rel="noreferrer noopener"
               href=""
@@ -177,7 +288,7 @@
           </span>
           <span>
             <a
-              class="decoration-none text-white"
+              class="lg:decoration-none lg:text-white"
               target="_blank"
               rel="noreferrer noopener"
               href="#"

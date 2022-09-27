@@ -19,9 +19,12 @@ module.exports = {
     extend: {
       fontFamily: {
         Pricedown: ["'Pricedown'", ...defaultTheme.fontFamily.sans],
+        Verla: ["'Verla'", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         gta: "url('../img/gta.jpg')",
+        gtav: "url('../img/gta-mobile.jpg')",
+        bannergta: "url('../img/banner-gta.jpg')",
       },
     },
   },

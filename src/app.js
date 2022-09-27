@@ -6,7 +6,18 @@ import getElementById from "./components/getId";
 import depositeSold from "./components/deposit";
 import withdrawSold from "./components/withDrwan";
 import overDrafte from "./components/overDraft";
-import { addUser, newUser } from "./components/addUser";
+import addUser from "./components/addUser";
+
+import { showInscript, showDeposit, showTransfer } from "./components/showForm";
+
+const btnForm = getElementById("btn-form");
+btnForm.addEventListener("click", () => showInscript());
+
+const btnTransac = getElementById("btn-transac");
+btnTransac.addEventListener("click", () => showDeposit());
+
+const btnTransfer = getElementById("btn-transfer");
+btnTransfer.addEventListener("click", () => showTransfer());
 
 // Get Input
 let inputName = getElementById("input-name");
@@ -24,6 +35,10 @@ let btnDeposit = getElementById("btn-deposit");
 let btnRetire = getElementById("btn-retirer");
 let btnSubmit = getElementById("btn-submit");
 
+// class user
+
+btnSubmit.addEventListener("click", () => addUser());
+
 // depose
 
 btnDeposit.addEventListener("click", () => depositeSold());
@@ -35,14 +50,6 @@ btnRetire.addEventListener("click", () => withdrawSold());
 // Découvert
 
 overDrafte();
-
-// class user
-
-btnSubmit.addEventListener("click", () => addUser());
-
-// btnSubmit.addEventListener("click", () => {
-//     console.log(newUser.curentSold);
-// });
 
 const date1 = new Date().getDate();
 const date2 = new Date().getMonth();
