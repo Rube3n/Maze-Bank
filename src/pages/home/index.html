@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Acceuil</title>
+    <title>Maze-Bank</title>
     <link href="../../assets/css/output.css" rel="stylesheet" />
   </head>
   <body class="bg-neutral-700 lg:bg-">
@@ -126,12 +126,12 @@
               Show Form
             </button>
           </div>
-          <div class="flex justify-center items-center">
+          <div class="flex justify-center items-center flex-col">
             <form
               id="form-inscript"
               class="hidden flex-col lg:flex-row justify-center lg:w-full"
             >
-              <div>
+              <div class="flex justify-center items-center flex-col lg:flex-row">
                 <input
                   id="input-name"
                   type="text"
@@ -142,7 +142,7 @@
                   id="input-sold"
                   type="number"
                   placeholder="Sold"
-                  class="h-9 my-4 rounded border-2 border-red-500 placeholder:text-red-900 pl-2 lg:mt-0 lg:mx-4 text-black"
+                  class="h-9 my-4 rounded border-2 border-red-500 placeholder:text-red-900 pl-2 lg:my-0 lg:mx-4 text-black"
                 />
                 <input
                   id="input-iban"
@@ -151,11 +151,11 @@
                   class="h-9 rounded border-2 border-red-500 placeholder:text-red-900 pl-2 text-black"
                 />
               </div>
-              <div class="flex justify-center items-center lg:flex-col py-10">
+              <div class="flex justify-center items-center lg:flex-row py-10">
                 <button
                   type="button"
                   id="btn-submit"
-                  class="border-red-800 py-2 px-2 rounded border-2 lg:mt-5 lg:w-48 lg:flex lg:justify-center lg:items-center"
+                  class="border-red-800 py-2 px-2 rounded border-2 lg:w-48 lg:flex lg:justify-center lg:items-center"
                 >
                   Envoyer
                 </button>
