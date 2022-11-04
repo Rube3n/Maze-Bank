@@ -52,29 +52,33 @@
         <div>
           <!-- NAV -->
           <nav>
-            <ul>
-              <li
-                class="pt-8 flex justify-center items-center lg:flex lg:flex-row lg:text-3xl lg:font-Pricedown"
-              >
-                <i class="fa-solid fa-house lg:pl-4 lg:text-red-600"></i>
-                <span class="hidden lg:flex lg:pl-4">Dashboard</span>
-              </li>
-              <li
-                class="flex justify-center items-center px-4 py-8 lg:text-3xl lg:py-8"
-              >
-                <i class="fa-regular fa-user lg:pl-4 lg:text-red-600"></i>
-                <span class="hidden lg:flex lg:pl-4">Profil</span>
-              </li>
-              <li class="flex justify-center items-center px-4 lg:text-3xl">
-                <i class="fa-solid fa-gear lg:pl-4 lg:text-red-600"></i>
-                <span class="hidden lg:flex lg:pl-4">Setting</span>
-              </li>
-              <li
-                class="flex justify-center items-center py-8 px-4 lg:text-3xl lg:pt-8"
-              >
-                <i class="fa-solid fa-circle-info lg:pl-4 lg:text-red-600"></i>
-                <span class="hidden lg:flex lg:pl-4">Help</span>
-              </li>
+            <ul class="lg:grid lg:grid-cols-2">
+              <div class="lg:flex lg:flex-col justify-center">
+                <i class="fa-solid fa-house lg:text-red-600"></i>
+                <i class="fa-regular fa-user lg:py-8  lg:text-red-600"></i>
+                <i class="fa-solid fa-gear lg:py-4 lg:text-red-600"></i>
+                <i class="fa-solid fa-circle-info lg:pt-8 lg:text-red-600"></i>
+              </div>
+              <div class="lg:flex lg:flex-col">
+                <li
+                  class="pt-8 flex justify-center items-center lg:flex lg:flex-row lg:text-3xl lg:font-Pricedown lg:py-0"
+                >
+                  <span class="hidden lg:flex lg:pr-4">Dashboard</span>
+                </li>
+                <li
+                  class="flex justify-center items-center px-4 py-8 lg:text-3xl lg:px-0 lg:py-0"
+                >
+                  <span class="hidden lg:flex lg:py-8">Profil</span>
+                </li>
+                <li class="flex justify-center items-center px-4 lg:text-3xl">
+                  <span class="hidden lg:flex lg:pl-4">Setting</span>
+                </li>
+                <li
+                  class="flex justify-center items-center py-8 px-4 lg:text-3xl lg:py-0 lg:px-0"
+                >
+                  <span class="hidden lg:flex lg:pl-4 lg:pt-8">Help</span>
+                </li>
+              </div>
             </ul>
           </nav>
         </div>
@@ -110,7 +114,9 @@
             <i class="fa-solid fa-euro-sign text-xl lg:text-3xl"></i>
           </div>
           <div class="flex flex-row">
-            <h2 class="text-xl pr-3 lg:text-3xl lg:pr-5 lg:font-Inter lg:flex-row">
+            <h2
+              class="text-xl pr-3 lg:text-3xl lg:pr-5 lg:font-Inter lg:flex-row"
+            >
               Votre Iban est le :
             </h2>
             <span id="dep-iban" class="text-xl pr-3 lg:pr-5 lg:text-3xl"></span>
@@ -131,7 +137,9 @@
               id="form-inscript"
               class="hidden flex-col lg:flex-row justify-center lg:w-full"
             >
-              <div class="flex justify-center items-center flex-col lg:flex-row">
+              <div
+                class="flex justify-center items-center flex-col lg:flex-row"
+              >
                 <input
                   id="input-name"
                   type="text"
